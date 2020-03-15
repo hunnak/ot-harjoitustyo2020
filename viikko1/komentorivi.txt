@@ -1,0 +1,44 @@
+kurssit
+├── ot2018
+│   └── viikko1
+│       └── Unicafe
+│           ├── pom.xml
+│           └── src
+│               ├── main
+│               │   ├── java
+│               │   │   └── com
+│               │   │       └── mycompany
+│               │   │           └── unicafe
+│               │   │               ├── Kassapaate.java
+│               │   │               ├── Maksukortti.java
+│               │   │               └── Paaohjelma.java
+│               │   └── resources
+│               └── test
+│                   └── java
+│                       └── com
+│                           └── mycompany
+│                               └── unicafe
+│                                   └── MaksukorttiTest.java
+├── ot2019
+│   └── viikko1
+│       └── Unicafe
+│           ├── pom.xml
+│           └── src
+│               ├── main
+│               │   └── java
+│               │       └── com
+│               │           └── mycompany
+│               │               └── unicafe
+│               │                   ├── Kassapaate.java
+│               │                   ├── Maksukortti.java
+│               │                   └── Paaohjelma.java
+│               └── test
+│                   └── java
+│                       └── com
+│                           └── mycompany
+│                               └── unicafe
+│                                   └── MaksukorttiTest.java
+└── viikko3
+
+30 directories, 10 files
+

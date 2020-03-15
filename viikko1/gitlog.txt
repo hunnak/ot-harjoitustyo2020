@@ -1,0 +1,136 @@
+commit ed4607d92de6570f241b8e8e1c624292f843fa25
+Author: hunnak <joel.hunnakko@helsinki.fi>
+Date:   Sun Mar 15 16:48:33 2020 +0200
+
+    tiedostoerot
+
+ tiedostoja/file1  | 1 -
+ tiedostoja/file2  | 0
+ tiedostoja/file22 | 0
+ 3 files changed, 1 deletion(-)
+
+commit 5d3470d957821e7efe98529bb0d1f2f320281bda
+Author: hunnak <joel.hunnakko@helsinki.fi>
+Date:   Sun Mar 15 16:46:05 2020 +0200
+
+    tiedostojuttu
+
+ tiedostoja/file1 | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 472b951c6c881feae9d38f317d210060f6a7e7ee
+Author: hunnak <joel.hunnakko@helsinki.fi>
+Date:   Sun Mar 15 16:44:52 2020 +0200
+
+    tiedostokansio tiedostoineen
+
+ tiedostoja/file1 | 1 +
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 1 insertion(+)
+
+commit d23137c694221a09e38331548ea1c2912331836b
+Author: hunnak <joel.hunnakko@helsinki.fi>
+Date:   Sun Mar 15 16:42:50 2020 +0200
+
+    tiedostokansio tiedostoineen
+
+ file1 | 0
+ file2 | 0
+ file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit bbf74e5831f58bffb1c9334a91c17cdf1046ceb2
+Author: hunnak <joel.hunnakko@helsinki.fi>
+Date:   Sun Mar 15 16:34:21 2020 +0200
+
+    muuotksia tiedostoissa
+
+ eka.txt    | 4 ++--
+ kolmas.txt | 2 +-
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+
+commit c7b8c321d415e3b8b7db8c685affa8f75f072d71
+Author: hunnak <joel.hunnakko@helsinki.fi>
+Date:   Sun Mar 15 16:32:07 2020 +0200
+
+    nimi muunnos
+
+ eka.txt      | 7 +++++++
+ tiedosto.txt | 7 -------
+ 2 files changed, 7 insertions(+), 7 deletions(-)
+
+commit 2981396e6f27b821ff3ddf08b823d83193b51516
+Author: hunnak <joel.hunnakko@helsinki.fi>
+Date:   Sun Mar 15 16:31:53 2020 +0200
+
+    nimi muunnos
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 33beaca68617d6a9590eef04b5d3d899eabb86c3
+Author: hunnak <joel.hunnakko@helsinki.fi>
+Date:   Sun Mar 15 16:28:45 2020 +0200
+
+    lisää tekstiä vaan
+
+ tiedosto.txt | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+commit 89100c98f88f8ad7b266ac10f580757f031d4cbb
+Author: hunnak <joel.hunnakko@helsinki.fi>
+Date:   Sun Mar 15 16:26:46 2020 +0200
+
+    lisää tekstiä
+
+ tiedosto.txt | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+commit 07d91371d1e83a378799ef736119bd573b4e663a
+Author: hunnak <joel.hunnakko@helsinki.fi>
+Date:   Sun Mar 15 16:18:51 2020 +0200
+
+    uutta hakemistoo
+
+ stuff/neli.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 5d2ef37922c7512020ff82cb4a5cade040eb3071
+Author: hunnak <joel.hunnakko@helsinki.fi>
+Date:   Sun Mar 15 16:17:04 2020 +0200
+
+    muokkauksia
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 57674985ea18b09e96d8b600b67c8202455f1df0
+Author: hunnak <joel.hunnakko@helsinki.fi>
+Date:   Sun Mar 15 16:13:24 2020 +0200
+
+    luotu kolmas.txt
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit efea200ddabe4d95ed3c20836aa3f900032f12d0
+Author: hunnak <joel.hunnakko@helsinki.fi>
+Date:   Sun Mar 15 16:11:02 2020 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 47da69d8f095a0446a8fabe0e5830f5b961aa639
+Author: hunnak <joel.hunnakko@helsinki.fi>
+Date:   Sun Mar 15 16:07:59 2020 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
