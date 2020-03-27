@@ -1,4 +1,5 @@
 import javafx.application.Application;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -13,12 +14,20 @@ public class Main_ui extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        launch(args);
         // TODO code application logic here
     }
 
     @Override
     public void start(Stage primaryStage) throws Exception {
         VBox root = new VBox(10);
+        
+        root.setPadding(new Insets(10));
+        
+        Screen screen = new Screen(width, height);
+        
+        root.getChildren().add(screen);
+        
         Scene scene=new Scene(root);
         
         primaryStage.setResizable(false);
