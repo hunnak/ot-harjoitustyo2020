@@ -43,7 +43,6 @@ public class Main_ui extends Application {
         primaryStage.show();
         
         
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
