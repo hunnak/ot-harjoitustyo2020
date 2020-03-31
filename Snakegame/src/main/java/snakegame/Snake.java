@@ -13,6 +13,7 @@ package snakegame;
  * @author joelhunn
  */
 import java.util.ArrayList;
+import javafx.scene.paint.Color;
 
 public class Snake {
     ArrayList<Point> snakepoints = new ArrayList<Point>();
@@ -23,16 +24,24 @@ public class Snake {
         int px = s.getW() /2;
         int py = s.getH() /2;
         
-        mouth = new Point(px,py,null);
-        
+        mouth = new Point(px,py,null,s);
+        mouth.setFill(Color.GOLD.desaturate());
+        snakepoints.add(mouth);
         Point previous = mouth;
         
+        
         for( int i=1; i<p; i++){
-            Point poi = new Point(px+i, py, previous);
+            Point poi = new Point(px+i, py, previous, s);
             snakepoints.add(poi);
             previous=poi;
         }
     } 
+    public void setDirection(int direc){
+        mouth.direction=direc;
+    }
+    public int getDirection(){
+        return mouth.direction;
+    }
      
      
      

@@ -34,8 +34,8 @@ public class Screen extends Pane {
         h=height;
        
         setMinSize(w * Main_ui.blocksize, h * Main_ui.blocksize);
-        setBackground(new Background(new BackgroundFill(Color.BLACK, null, null)));
-        setBorder(new Border(new BorderStroke(Color.WHITE, BorderStrokeStyle.SOLID, null, new BorderWidths(1))));
+        setBackground(new Background(new BackgroundFill(Color.WHITE, null, null)));
+        setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, null, new BorderWidths(1))));
     }
     public int getW(){
         return this.w;
@@ -51,7 +51,13 @@ public class Screen extends Pane {
     }
     private void addPoint(Point poi){
         getChildren().add(poi);
-        points.add(poi);
+        this.points.add(poi);
+    }
+    public void update(){
+        for(Point p:points){
+            p.update();
+            
+        }
     }
 
 }
