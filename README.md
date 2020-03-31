@@ -1,3 +1,10 @@
+# Snake game
+
+Käyttäjä voi pelata käärmepeliä ajankulukseen. Pelissä liikutaan nuolinäppäimillä ja kerätään ruudulle ilmestyviä pisteitä.
+Peli päättyy kun pelaaja osuu käärmeen omaan runkoon käärmeen päällä.
+
+
+
 
 **Dokumentointi**
 
