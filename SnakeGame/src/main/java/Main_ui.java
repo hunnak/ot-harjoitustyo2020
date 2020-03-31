@@ -10,11 +10,13 @@ public class Main_ui extends Application {
     
     int width=30;
     int height=15;
+    
+    int snakelenght=5;
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        launch(args);
+        launch(Main_ui.class);
         // TODO code application logic here
     }
 
@@ -25,7 +27,7 @@ public class Main_ui extends Application {
         root.setPadding(new Insets(10));
         
         Screen screen = new Screen(width, height);
-        
+        screen.addSnake(new Snake(this.snakelenght, screen));
         root.getChildren().add(screen);
         
         Scene scene=new Scene(root);
