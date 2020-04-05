@@ -14,8 +14,8 @@ public class Main_ui extends Application {
     
     static int blocksize=10;
     
-    int width=60;
-    int height=30;
+    static int width=60;
+    static int height=30;
     
     int snakelenght=5;
     

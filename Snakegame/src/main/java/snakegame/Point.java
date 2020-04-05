@@ -13,10 +13,10 @@ public class Point extends Rectangle{
     static final int DOWN=2;
     static final int LEFT=3;
     
-    private int x;
-    private int y;
-    private int oldx;
-    private int oldy;
+    int x;
+    int y;
+    int oldx;
+    int oldy;
     
     Point previous;
     

@@ -24,8 +24,8 @@ import javafx.scene.paint.Color;
  * @author joelhunn
  */
 public class Screen extends Pane {
-    private int w;
-    private int h;
+    static int w;
+    static int h;
     
     ArrayList<Point> points =new ArrayList<Point>();
     Snake snake;
