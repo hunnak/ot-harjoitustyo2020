@@ -6,7 +6,9 @@
 package sproject.main;
 
 
+import javafx.animation.AnimationTimer;
 import javafx.application.Application;
+import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.layout.VBox;
@@ -34,8 +36,12 @@ public class Main_ui extends Application {
 	Canvas c = new Canvas(width , height );
 	GraphicsContext gc = c.getGraphicsContext2D();
         root.getChildren().add(c);
+        
+        
+			
 
-	}
+			Scene scene = new Scene(root, width , height);
+    }
 
     /**
      * @param args the command line arguments
