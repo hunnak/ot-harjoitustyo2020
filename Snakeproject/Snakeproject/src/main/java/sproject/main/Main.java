@@ -6,6 +6,9 @@
 package sproject.main;
 
 
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 /**
@@ -13,9 +16,14 @@ import javafx.stage.Stage;
  * @author joelhunn
  */
 public class Main {
+    static boolean gameOver = false;
+    static int width = 50;
+    static int height = 50;
     
     public void start(Stage primaryStage) {
-		
+    	VBox root = new VBox();
+	Canvas c = new Canvas(width , height );
+	GraphicsContext gc = c.getGraphicsContext2D();    
 
 	}
 
