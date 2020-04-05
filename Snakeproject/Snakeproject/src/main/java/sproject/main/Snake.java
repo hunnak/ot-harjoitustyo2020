@@ -22,10 +22,16 @@ public class Snake {
         int py = height /2;
         
         mouth = new Point(px,py);
-        mouth.setFill(Color.GOLD.desaturate());
+        //mouth.setFill(Color.GOLD.desaturate());
         snakepoints.add(mouth);
         snakepoints.add(new Point(width / 2, height / 2));
         snakepoints.add(new Point(width / 2, height / 2));
+    }
+    public int getSize(){
+        return snakepoints.size();
+    }
+    public Point Get(int i){
+        return snakepoints.get(i);
     }
 
 }
