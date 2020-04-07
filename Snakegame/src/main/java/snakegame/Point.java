@@ -17,9 +17,11 @@ public class Point extends Rectangle{
     int oldx;
     int oldy;    
     Point previous;
-    int direction=UP;
+    int direction=LEFT;
     int maxX;
     int maxY;
+
+    
     
     public Point(int x, int y, Point p, Screen screen){
         super(Main_ui.blocksize, Main_ui.blocksize);
@@ -90,6 +92,15 @@ public class Point extends Rectangle{
     }
     public void setY(int y){
         this.y=y;
+    }
+   
+    public int getplaceX() {
+        return this.x;
+    }
+
+    
+    public int getplaceY() {
+        return this.y;
     }
     
 }

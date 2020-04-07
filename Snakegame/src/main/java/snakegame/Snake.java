@@ -19,6 +19,7 @@ public class Snake {
     ArrayList<Point> snakepoints = new ArrayList<Point>();
     
     Point mouth;
+    Point lastPoint;
      
     public Snake(int p, Screen s){
         int px = s.getW() /2;
@@ -27,13 +28,13 @@ public class Snake {
         mouth = new Point(px,py,null,s);
         mouth.setFill(Color.GOLD.desaturate());
         snakepoints.add(mouth);
-        Point previous = mouth;
+        lastPoint = mouth;
         
         
         for( int i=1; i<p; i++){
-            Point poi = new Point(px+i, py, previous, s);
+            Point poi = new Point(px+i, py, lastPoint, s);
             snakepoints.add(poi);
-            previous=poi;
+            lastPoint=poi;
         }
     } 
     public void setDirection(int direc){
