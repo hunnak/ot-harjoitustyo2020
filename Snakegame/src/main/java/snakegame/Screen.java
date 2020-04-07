@@ -45,7 +45,7 @@ public class Screen extends Pane {
     }
     public void addSnake(Snake dasnake){
         snake=dasnake;
-        for(Point p:dasnake.snakepoints){
+        for(Point p:snake.snakepoints){
             addPoint(p);
         }
     }

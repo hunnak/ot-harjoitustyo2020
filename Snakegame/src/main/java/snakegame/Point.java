@@ -12,16 +12,12 @@ public class Point extends Rectangle{
     static final int RIGHT=1;
     static final int DOWN=2;
     static final int LEFT=3;
-    
     int x;
     int y;
     int oldx;
-    int oldy;
-    
+    int oldy;    
     Point previous;
-    
     int direction=UP;
-    
     int maxX;
     int maxY;
     
@@ -29,7 +25,6 @@ public class Point extends Rectangle{
         super(Main_ui.blocksize, Main_ui.blocksize);
         this.x=x;
         this.y=y;
-        
         setTranslateX(this.x*Main_ui.blocksize);
         setTranslateY(this.y*Main_ui.blocksize);
         previous=p;
@@ -61,8 +56,8 @@ public class Point extends Rectangle{
         }
     }
     public void update(){
-        oldx=x;
-        oldy=y;
+        oldx=this.x;
+        oldy=this.y;
         if(previous == null){
             switch(direction){
             case UP:
@@ -79,15 +74,15 @@ public class Point extends Rectangle{
                 break;        
             }
         }else{
-            x=previous.oldx;
-            y=previous.oldy;
+            this.x=previous.oldx;
+            this.y=previous.oldy;
         }
         updatePlace();
     }
     public void updatePlace(){
         
-        setTranslateX(x* Main_ui.blocksize);
-        setTranslateY(y* Main_ui.blocksize);
+        setTranslateX(this.x* Main_ui.blocksize);
+        setTranslateY(this.y* Main_ui.blocksize);
     }
     
     public void setX(int x){
