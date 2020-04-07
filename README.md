@@ -11,3 +11,4 @@ Peli päättyy kun pelaaja osuu käärmeen omaan runkoon käärmeen päällä.
 [Vaatimusmäärittely](https://github.com/hunnak/ot-harjoitustyo2020/blob/master/vaatimusmaarittely.md)
 
 [Tuntikirjanpito](https://github.com/hunnak/ot-harjoitustyo2020/blob/master/tuntikirjanpito.md)
+[Arkkitehtuuri](https://github.com/hunnak/ot-harjoitustyo2020/blob/master/dokumentaatio/arkkitehtuuri.md)
