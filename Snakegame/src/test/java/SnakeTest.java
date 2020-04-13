@@ -10,8 +10,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import snakegame.ui.Screen;
-import snakegame.ui.Snake;
+import snakegame.domain.Snake;
 
 /**
  *
@@ -43,8 +42,7 @@ public class SnakeTest {
     
     @Test
     public void snakeTest(){
-        Screen screen = new Screen(10,10);
-        Snake sna = new Snake(4,screen);
+
         
     }
 }

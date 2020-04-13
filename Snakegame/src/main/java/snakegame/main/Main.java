@@ -5,7 +5,11 @@
  */
 package snakegame.main;
 
-import snakegame.ui.Main_ui;
+import javax.swing.SwingUtilities;
+import snakegame.domain.Screen;
+import snakegame.ui.Ui;
+import snakegame.domain.Keylistener;
+import snakegame.domain.Update;
 
 /**
  *
@@ -17,8 +21,19 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Main_ui.main(args);
-        // TODO code application logic here
+        Screen screen = new Screen(20, 20);
+        Ui userInterface = new Ui(screen, 20);
+        SwingUtilities.invokeLater(userInterface);
+        while (userInterface.getUpdate()==null){
+            try{
+                Thread.sleep(100);
+                
+            } catch (InterruptedException ex) {
+               // System.out.println("Graphics not created.");
+            }
+        }
+        screen.setUpdate(userInterface.getUpdate());
+        screen.start();
     }
     
 }

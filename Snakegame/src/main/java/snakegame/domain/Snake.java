@@ -17,6 +17,8 @@ public class Snake {
     private ArrayList<Point> snakePoints;
     private Direction direc;
     private boolean grow;
+    private static final int minSize = 5;
+
     public Snake(int newX, int newY, Direction newDirection){
         this.snakePoints= new ArrayList<Point>();
         this.snakePoints.add( new Point(newX, newY));
@@ -52,6 +54,11 @@ public class Snake {
             newX = newX - 1;
         }
         this.snakePoints.add(0, new Point(newX, newY));
+        if (!this.grow && this.snakePoints.size() > minSize) {
+            snakePoints.remove(snakePoints.size() - 1);
+        } else {
+            this.grow = false;
+        }
     }    
    
     public void grow(){
