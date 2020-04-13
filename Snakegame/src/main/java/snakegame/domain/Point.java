@@ -10,8 +10,8 @@ public class Point{
     int x;
     int y;
     public Point(int xx, int yy){
-        x=xx;
-        y=yy;
+        x = xx;
+        y = yy;
     }
 
     public int getX(){
@@ -22,9 +22,9 @@ public class Point{
         return y;
     }
     public boolean touch(Point dapoint){
-        int daX=dapoint.getX();
-        int daY=dapoint.getY();
-        if(daX==this.x && daY==this.y){
+        int daX = dapoint.getX();
+        int daY = dapoint.getY();
+        if(daX == this.x && daY == this.y){
             return true;
         }else{
             return false;
@@ -34,7 +34,7 @@ public class Point{
     
        
     public String toString(){
-        return "("+this.x+","+this.y+")";
+        return "(" + this.x + "," + this.y + ")";
     }
 
 }

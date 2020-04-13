@@ -26,11 +26,11 @@ public class Ui implements Runnable {
     private int pointSize;
     
     public Ui(Screen newScreen, int newPointSize) {
-        this.screen=newScreen;
-        this.pointSize=newPointSize;
+        this.screen = newScreen;
+        this.pointSize = newPointSize;
     }
     private void createComponents(Container container){
-        this.graphicsLogic= new GraphicsLogic(this.screen, this.pointSize);
+        this.graphicsLogic = new GraphicsLogic(this.screen, this.pointSize);
         container.add(graphicsLogic);
         Keylistener keylistener = new Keylistener(screen.getSnake());
         frame.addKeyListener(keylistener);

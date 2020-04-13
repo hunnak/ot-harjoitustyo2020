@@ -11,6 +11,6 @@ package snakegame.domain;
  */
 public enum Direction {
         Left, Right, Down, Up;
-    }
+}
     
 

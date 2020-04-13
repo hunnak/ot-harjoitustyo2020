@@ -22,12 +22,12 @@ public class GraphicsLogic extends JPanel implements Update {
     public void update() {
         repaint();
     }
-    public GraphicsLogic(Screen newScreen, int newPointSize){
+    public GraphicsLogic(Screen newScreen, int newPointSize) {
         this.screen = newScreen;
         this.pointSize = newPointSize;
         super.setBackground(Color.BLACK);
     }
-    private void drawSnake(Graphics graphics){
+    private void drawSnake(Graphics graphics) {
         graphics.setColor(Color.GREEN);
         Snake snake = screen.getSnake();
         for (Point point : snake.getBodyparts()) {
@@ -49,7 +49,7 @@ public class GraphicsLogic extends JPanel implements Update {
                 this.pointSize);
     }
     @Override
-    protected void paintComponent(Graphics graphics){
+    protected void paintComponent(Graphics graphics) {
         super.paintComponent(graphics);
         
     }
