@@ -16,13 +16,13 @@ Sovellus koostuu käyttöliittymästä, sekä pelin toteuttavista toiminnallisis
 
 ### Toiminnallisuus
 
-Käärmepelissä liikutaan ruudulle ilmestyneellä 2D-tasolla, poimitaan pistepikseleitä ja vältetään törmämästä seiniin tai itse käärmeeseen.
-Käärme liikkuu nuolinäppäimillä.
+Käärmepelissä liikutaan ruudulle ilmestyneellä 2D-tasolla, poimitaan pistepikseleitä ja vältetään törmämästä seiniin tai itse käärmeeseen. (tehty)
+Käärme liikkuu nuolinäppäimillä. (tehty)
 ## Jatkokehitysideoita
 
 Perusversion jälkeen järjestelmää täydennetään ajan salliessa esim. seuraavilla toiminnallisuuksilla
 
-- käärme kasvaa syödessään pisteitä
+- käärme kasvaa syödessään pisteitä (alustavasti tehty)
 - äänitehosteet
 - nimimerkki ennätyspisteitä varten, joka tallennetaan ylös.
 - vaikeusasteen lisääminen
