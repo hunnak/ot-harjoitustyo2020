@@ -23,9 +23,6 @@ public class Snake {
         this.direc=newDirection;
         this.grow=false;
     }
-    //Luokka Suunta löytyy valmiina pakkauksesta Matopeli.domain.
-
-    //Mato luodaan yhden palan pituisena, mutta madon "aikuispituus" on kolme. Madon tulee kasvaa yhdellä aina kun se liikkuu. Kun madon pituus on kolme, se kasvaa isommaksi vain syödessään.
 
 
 
@@ -59,7 +56,7 @@ public class Snake {
    
     public void grow(){
         this.grow=true;
-    //kasvattaa madon kokoa yhdellä. Madon kasvaminen tapahtuu seuraavan liiku-metodikutsun yhteydessä. Sitä seuraaviin liiku-kutsuihin kasvaminen ei enää vaikuta. Jos madon pituus on 1 tai 2 kun metodia kutsutaan, ei kutsulla saa olla mitään vaikutusta matoon.    
+    
     }    
     public boolean touchPoint(Point topoint){
         for (Point p : this.snakePoints) {
@@ -69,10 +66,10 @@ public class Snake {
         }
         return false;
     }
-    //tarkistaa osuuko mato parametrina annettuun palaan. Jos mato osuu palaan, eli joku madon pala osuu metodille parametrina annettuun palaan, tulee metodin palauttaa arvo true. Muuten metodi palauttaa arvon false.
+    
     public boolean touchItself(){
         
     return touchPoint(this.snakePoints.get(0));
-    //tarkistaa osuuko mato itseensä. Jos mato osuu itseensä, eli joku sen pala osuu johonkin toiseen sen palaan, metodi palauttaa arvon true. Muuten metodi palauttaa arvon false.public void 
+    
     }
 }
