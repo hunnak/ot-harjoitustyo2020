@@ -1,9 +1,9 @@
-package snakegame;
+package snakegame.ui;
 
 
 import javafx.animation.AnimationTimer;
-import snakegame.Snake;
-import snakegame.Screen;
+import snakegame.ui.Snake;
+import snakegame.ui.Screen;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.geometry.Insets;

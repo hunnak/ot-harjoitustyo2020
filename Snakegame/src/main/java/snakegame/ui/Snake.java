@@ -1,4 +1,4 @@
-package snakegame;
+package snakegame.ui;
 
 
 
@@ -16,12 +16,13 @@ import java.util.ArrayList;
 import javafx.scene.paint.Color;
 
 public class Snake {
-    ArrayList<Point> snakepoints = new ArrayList<Point>();
+    ArrayList<Point> snakepoints;
     
     Point mouth;
     Point lastPoint;
      
     public Snake(int p, Screen s){
+        this.snakepoints= new ArrayList<Point>();
         int px = s.getW() /2;
         int py = s.getH() /2;
         

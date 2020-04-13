@@ -1,11 +1,11 @@
-package snakegame;
+package snakegame.ui;
 
 
 
-import snakegame.Main_ui;
+import snakegame.ui.Main_ui;
 import javafx.scene.shape.Rectangle;
 
-import snakegame.Main_ui;
+import snakegame.ui.Main_ui;
 
 public class Point extends Rectangle{
     static final int UP=0;

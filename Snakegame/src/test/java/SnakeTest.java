@@ -10,8 +10,8 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import snakegame.Screen;
-import snakegame.Snake;
+import snakegame.ui.Screen;
+import snakegame.ui.Snake;
 
 /**
  *

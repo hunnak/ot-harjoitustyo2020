@@ -1,4 +1,4 @@
-package snakegame;
+package snakegame.ui;
 
 
 
@@ -8,7 +8,7 @@ package snakegame;
  * and open the template in the editor.
  */
 
-import snakegame.Main_ui;
+import snakegame.ui.Main_ui;
 import java.util.ArrayList;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
