@@ -5,35 +5,35 @@
  */
 package snakegame.domain;
 
-public class Point{
+public class Point {
 
     int x;
     int y;
-    public Point(int xx, int yy){
+    public Point(int xx, int yy) {
         x = xx;
         y = yy;
     }
 
-    public int getX(){
+    public int getX() {
         return x;
     }
         
-    public int getY(){
+    public int getY() {
         return y;
     }
-    public boolean touch(Point dapoint){
+    public boolean touch(Point dapoint) {
         int daX = dapoint.getX();
         int daY = dapoint.getY();
-        if(daX == this.x && daY == this.y){
+        if (daX == this.x && daY == this.y) {
             return true;
-        }else{
+        } else {
             return false;
         }
         
     }
     
        
-    public String toString(){
+    public String toString() {
         return "(" + this.x + "," + this.y + ")";
     }
 

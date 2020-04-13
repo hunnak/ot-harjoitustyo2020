@@ -39,7 +39,7 @@ public class GraphicsLogic extends JPanel implements Update {
                     true);
         }
     }
-    private void drawToken(Graphics graphics){
+    private void drawToken(Graphics graphics) {
         Token token = screen.getToken();
         graphics.setColor(Color.ORANGE);
         graphics.fillOval(

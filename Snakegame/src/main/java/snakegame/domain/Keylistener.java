@@ -15,11 +15,11 @@ import java.awt.event.KeyEvent;
 public class Keylistener extends KeyAdapter {
     
     private Snake snake;
-    public Keylistener(Snake dasnake){
-        this.snake=dasnake;
+    public Keylistener(Snake dasnake) {
+        this.snake = dasnake;
     }
     
-    public void keyPressed(KeyEvent event){
+    public void keyPressed(KeyEvent event) {
         if (event.getKeyCode() == KeyEvent.VK_UP) {
             snake.setDirection(Direction.Up);
         } else if (event.getKeyCode() == KeyEvent.VK_RIGHT) {

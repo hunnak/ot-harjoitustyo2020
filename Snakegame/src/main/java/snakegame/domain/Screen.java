@@ -32,7 +32,7 @@ public class Screen extends Timer implements ActionListener {
         this.h = height;
         this.gameContinue = true;
         this.tokenPlace = addNewToken();
-        this.snake = new Snake(width/2, height/2, Direction.Left );
+        this.snake = new Snake(width / 2, height / 2, Direction.Left);
         addActionListener(this);
         setInitialDelay(2000);
     }
@@ -42,26 +42,26 @@ public class Screen extends Timer implements ActionListener {
     public int getH() {
         return this.h;
     }
-    public boolean gameContinue(){
+    public boolean gameContinue() {
         return gameContinue;
     }
-    public Snake getSnake(){
+    public Snake getSnake() {
         return snake;
     }
-    public void setSnake(Snake setSnake){
-        this.snake=setSnake;
+    public void setSnake(Snake setSnake) {
+        this.snake = setSnake;
     }
-    public Token getToken(){
+    public Token getToken() {
         return this.tokenPlace;
     }
-    public void setTokenToItsPlace( Token token){
-        this.tokenPlace=token;
+    public void setTokenToItsPlace(Token token) {
+        this.tokenPlace = token;
     }
-    public void setUpdate(Update update){
+    public void setUpdate(Update update) {
         this.update = update;
     }
     
-    private void move(){
+    private void move() {
         this.snake.move();
     }
     private Token addNewToken() {
@@ -70,23 +70,23 @@ public class Screen extends Timer implements ActionListener {
         
         return new Token(randomX, randomY);
     }
-    private void touchToken(){
-        if(!snake.touchPoint(tokenPlace)){
+    private void touchToken() {
+        if (!snake.touchPoint(tokenPlace)) {
             return;
         }
-        this.tokenPlace=addNewToken();
+        this.tokenPlace = addNewToken();
         snake.grow();
     }
     private void gotHurt() {
         List<Point> points = snake.getBodyparts();
         Point head = snake.getBodyparts().get(0);
         for (int h = 1; h < snake.getBodyparts().size(); h++) {
-            if(head.touch(points.get(h))) {
+            if (head.touch(points.get(h))) {
                 gameContinue = false;
-                }          
-            }
+            }          
+        }
     }
-    private void updateInterface(){
+    private void updateInterface() {
         this.update.update();
     }
     
@@ -94,7 +94,7 @@ public class Screen extends Timer implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(!gameContinue){
+        if (!gameContinue) {
             return;
         }
         move();

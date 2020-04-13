@@ -11,7 +11,7 @@ package snakegame.domain;
  */
 public class Token extends Point {
     
-    public Token(int x, int y){
-        super(x,y);
+    public Token(int x, int y) {
+        super(x, y);
     }
 }

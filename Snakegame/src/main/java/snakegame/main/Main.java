@@ -24,8 +24,8 @@ public class Main {
         Screen screen = new Screen(20, 20);
         Ui userInterface = new Ui(screen, 20);
         SwingUtilities.invokeLater(userInterface);
-        while (userInterface.getUpdate()==null){
-            try{
+        while (userInterface.getUpdate() == null) {
+            try {
                 Thread.sleep(100);
                 
             } catch (InterruptedException ex) {

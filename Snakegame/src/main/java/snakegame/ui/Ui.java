@@ -29,16 +29,16 @@ public class Ui implements Runnable {
         this.screen = newScreen;
         this.pointSize = newPointSize;
     }
-    private void createComponents(Container container){
+    private void createComponents(Container container) {
         this.graphicsLogic = new GraphicsLogic(this.screen, this.pointSize);
         container.add(graphicsLogic);
         Keylistener keylistener = new Keylistener(screen.getSnake());
         frame.addKeyListener(keylistener);
     }
-    public Update getUpdate(){
+    public Update getUpdate() {
         return graphicsLogic; 
     }
-    public JFrame getFrame(){
+    public JFrame getFrame() {
         return frame;
     }
     @Override
