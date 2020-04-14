@@ -13,9 +13,9 @@ public enum Direction {
         Left, Right, Down, Up;
         
         
-        public String printDirection() {
+    public String printDirection() {
         String message = "You are moving " + this + " direction";
-        System.out.println( message );
+        System.out.println(message);
         
         return message;
     }
