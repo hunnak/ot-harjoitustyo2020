@@ -25,7 +25,7 @@ public class GraphicsLogic extends JPanel implements Update {
     public GraphicsLogic(Screen newScreen, int newPointSize) {
         this.screen = newScreen;
         this.pointSize = newPointSize;
-        super.setBackground(Color.BLACK);
+        super.setBackground(Color.WHITE);
     }
     private void drawSnake(Graphics graphics) {
         graphics.setColor(Color.GREEN);

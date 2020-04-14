@@ -25,7 +25,7 @@ public class Screen extends Timer implements ActionListener {
     private Token tokenPlace;
     private boolean gameContinue;
     private Update update;
-    private int scores;
+    static int scores;
     public Screen(int width, int height) {
         super(1000, null);
         this.w = width;
@@ -74,6 +74,7 @@ public class Screen extends Timer implements ActionListener {
         if (!snake.touchPoint(tokenPlace)) {
             return;
         }
+        scores += 100;
         this.tokenPlace = addNewToken();
         snake.grow();
     }
