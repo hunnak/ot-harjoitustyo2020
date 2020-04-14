@@ -47,14 +47,13 @@ public class SnakeTest {
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
     
-    @Test
-    public void beginGetHeadSnakeTest() {
-        ArrayList<Point> list = new ArrayList<Point>();
-        Point point = new Point(10, 10);
-        list.add(point);
-        Assert.assertEquals(list, snake.getBodyparts());
+   // @Test
+ //  //ArrayList<Point> list = new ArrayList<Point>();
+       // Point point = new Point(10, 10);
+       // list.add(point);
+       // Assert.assertEquals(list, snake.getBodyparts());
         
-    }
+   // }
     @Test
     public void getDirectionTest() {
         assertEquals("You are moving Left direction", snake.getDirection().printDirection());
@@ -76,4 +75,15 @@ public class SnakeTest {
         snake.grow();
         assertTrue(snake.grow);
     }
+    @Test
+    public void snakeTouch() {
+        Point point = new Point(15,15);
+        assertFalse(snake.touchPoint(point));
+        Point pointTrue = new Point(10,10);
+        assertTrue(snake.touchPoint(pointTrue));
+    }
+    @Test
+    public void touchItselfTest() {
+        
+    } 
 }
