@@ -16,7 +16,7 @@ public class Snake {
     
     private ArrayList<Point> snakePoints;
     private Direction direc;
-    private boolean grow;
+    public boolean grow;
     private static final int MINSIZE = 5;
 
     public Snake(int newX, int newY, Direction newDirection) {
