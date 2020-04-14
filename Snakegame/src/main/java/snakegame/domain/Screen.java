@@ -60,7 +60,9 @@ public class Screen extends Timer implements ActionListener {
     public void setUpdate(Update update) {
         this.update = update;
     }
-    
+    public int getScores(){
+        return scores;
+    }
     private void move() {
         this.snake.move();
     }
