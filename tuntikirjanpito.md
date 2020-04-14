@@ -10,4 +10,5 @@
 | 5.4.  | 2,5    | Paluu aikasempaan versioon, koodasin pistemerkki luokan (Token), pisteiden keräys toiminnallisuuden.  |
 |       |      | Käärme kasvaa pisteitä kerätessä.Peli ohi toiminnallisuuden, käärmeen törmätessä peli päättyy. Checkstyle toiminto lisätty |
 | 13.4  | 4    | Muokkasin projekti versiota site nettä logiikka on eroteltu käyttöliittymästä ja pääohjelmasta ja jakanut luokat kansioihinsa. Lisäksi olen tehnyt checkstyle korjaukset. | 
-| yht   | 23   | | 
+| 14.4  | 4    | Lisäsin pistelaskurin, tein testejä, suoritin jar release version, checkstyle tarkistettuj ja sekvenssikaavio lisätty. | 
+| yht   | 27   | | 
