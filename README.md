@@ -17,6 +17,7 @@ Peli päättyy kun pelaaja osuu käärmeen omaan runkoon käärmeen päällä.
 [Release linkki](https://github.com/hunnak/ot-harjoitustyo2020/releases/tag/viikko5)
 
 **Komentorivi käskyt**
+
 Ladatun jar tiedoston ajaminen komennolla: java -jar Snakegame-1.0-SNAPSHOT.jar
 
 Checkstyle raportin ajaminen komennolla: mvn jxr:jxr checkstyle:checkstyle
