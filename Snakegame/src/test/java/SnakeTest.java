@@ -1,4 +1,4 @@
-/*
+/* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -76,7 +76,7 @@ public class SnakeTest {
         assertTrue(snake.grow);
     }
     @Test
-    public void snakeTouch() {
+    public void snakeTouchTest() {
         Point point = new Point(15,15);
         assertFalse(snake.touchPoint(point));
         Point pointTrue = new Point(10,10);

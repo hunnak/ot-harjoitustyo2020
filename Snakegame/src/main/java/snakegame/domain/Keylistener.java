@@ -30,5 +30,8 @@ public class Keylistener extends KeyAdapter {
             snake.setDirection(Direction.Left);
         }
     }
+    public Direction forTestDirection(){
+        return this.snake.getDirection();
+    }
     
 }

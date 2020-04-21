@@ -6,6 +6,7 @@
 
 import java.awt.AWTException;
 import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -23,6 +24,7 @@ import snakegame.domain.Snake;
 public class KeylistenerTest {
     Keylistener listener;
     Robot robot;
+    Snake snake;
     public KeylistenerTest() {
     }
     
@@ -35,8 +37,10 @@ public class KeylistenerTest {
     }
     
     @Before
-    public void setUp() {
+    public void setUp() throws AWTException {
         listener = new Keylistener(new Snake(10,10,Direction.Left));
+        this.robot = null; 
+       
     }
     
     @After
@@ -49,8 +53,13 @@ public class KeylistenerTest {
     // @Test
     // public void hello() {}
     @Test
-    public void keypressingTest() throws AWTException {
-        robot = new Robot();
-        
+    public void keypressingUpTest() throws AWTException {
+        //KeyEvent event = new KeyEvent(VK_UP);
+        this.robot = new Robot();
+        robot.keyPress(KeyEvent.VK_UP);
+        assertEquals(snake.getDirection(), Direction.Up);
     }
+        
+        
+    
 }
