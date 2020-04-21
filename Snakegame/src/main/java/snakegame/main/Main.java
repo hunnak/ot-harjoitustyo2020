@@ -29,7 +29,7 @@ public class Main {
                 Thread.sleep(100);
                 
             } catch (InterruptedException ex) {
-               System.out.println("Graphics not created.");
+                System.out.println("Graphics not created.");
             }
         }
         screen.setUpdate(userInterface.getUpdate());

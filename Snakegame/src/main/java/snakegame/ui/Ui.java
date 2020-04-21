@@ -47,7 +47,7 @@ public class Ui implements Runnable {
     public void run() {
         frame = new JFrame("Do you dare to play Snake Game");
         frame.setPreferredSize(new Dimension(600, 600));
-
+        
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         createComponents(frame.getContentPane());
         frame.pack();

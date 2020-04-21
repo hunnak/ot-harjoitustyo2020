@@ -52,13 +52,13 @@ public class KeylistenerTest {
     //
     // @Test
     // public void hello() {}
-    @Test
-    public void keypressingUpTest() throws AWTException {
+    //@Test
+    //public void keypressingUpTest() throws AWTException {
         //KeyEvent event = new KeyEvent(VK_UP);
-        this.robot = new Robot();
-        robot.keyPress(KeyEvent.VK_UP);
-        assertEquals(snake.getDirection(), Direction.Up);
-    }
+      //  this.robot = new Robot();
+       // robot.keyPress(KeyEvent.VK_UP);
+        //assertEquals(snake.getDirection(), Direction.Up);
+    //}
         
         
     

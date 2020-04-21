@@ -88,7 +88,7 @@ public class Screen extends Timer implements ActionListener {
         for (int h = 1; h < snake.getBodyparts().size(); h++) {
             if (head.touch(points.get(h))) {
                 gameContinue = false;
-                gameOver();
+                
             }          
         }
     }
@@ -101,7 +101,8 @@ public class Screen extends Timer implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (!gameContinue) {
-            return;
+            
+            gameOver();
         }
         move();
         touchToken();
@@ -112,8 +113,8 @@ public class Screen extends Timer implements ActionListener {
     public void setText(JTextArea text) {
         this.text = text;
     }
-    public void gameOver(){
-        this.text.setText("GAME OVER! \n \n You got some sweet " + getScores() + " scores"+ "ps. turn the application on again");
+    public void gameOver() {
+        this.text.setText("GAME OVER! \n \n You got some sweet " + getScores() + " scores" + "ps. turn the application on again");
         
     }
 
