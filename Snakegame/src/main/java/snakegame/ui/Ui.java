@@ -6,6 +6,7 @@
 package snakegame.ui;
 
 
+import java.awt.Color;
 import java.awt.Container;
 import java.awt.Dimension;
 import javax.swing.JFrame;
@@ -46,10 +47,7 @@ public class Ui implements Runnable {
     public void run() {
         frame = new JFrame("Do you dare to play Snake Game");
         frame.setPreferredSize(new Dimension(600, 600));
-        JLabel scoreLabel = new JLabel("score : "); 
-        scoreLabel.setBounds(30, 550, 46, 14);
-        frame.add(scoreLabel); 
-        scoreLabel.setText(String.valueOf(screen.getScores()));
+
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         createComponents(frame.getContentPane());
         frame.pack();

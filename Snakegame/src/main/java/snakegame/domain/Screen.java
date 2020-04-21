@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
+import javax.swing.JTextArea;
 import javax.swing.Timer;
 
 /**
@@ -25,7 +26,8 @@ public class Screen extends Timer implements ActionListener {
     private Token tokenPlace;
     private boolean gameContinue;
     private Update update;
-    static int scores;
+    private int scores;
+    private JTextArea text;
     public Screen(int width, int height) {
         super(1000, null);
         this.w = width;
@@ -86,6 +88,7 @@ public class Screen extends Timer implements ActionListener {
         for (int h = 1; h < snake.getBodyparts().size(); h++) {
             if (head.touch(points.get(h))) {
                 gameContinue = false;
+                gameOver();
             }          
         }
     }
@@ -106,6 +109,12 @@ public class Screen extends Timer implements ActionListener {
         updateInterface();
         setDelay(1000 / this.snake.getSnakeLenght());
     }
-    
+    public void setText(JTextArea text) {
+        this.text = text;
+    }
+    public void gameOver(){
+        this.text.setText("GAME OVER! \n \n You got some sweet " + getScores() + " scores"+ "ps. turn the application on again");
+        
+    }
 
 }
