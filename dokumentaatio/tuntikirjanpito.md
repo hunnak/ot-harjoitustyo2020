@@ -12,4 +12,6 @@
 | 13.4  | 4    | Muokkasin projekti versiota site nettä logiikka on eroteltu käyttöliittymästä ja pääohjelmasta ja jakanut luokat kansioihinsa. Lisäksi olen tehnyt checkstyle korjaukset. | 
 | 14.4  | 4    | Lisäsin pistelaskurin, tein testejä, suoritin jar release version, checkstyle tarkistettuj ja sekvenssikaavio lisätty. | 
 |  21.4  | 3,5   | Toteutuksen pohdintaa, graficslogic luokan korjaaminen että käärme ja token päivittyvät ruudulle. Yritin saada tehtyä uusia testejä snakelle ja keylistener luokalle tuloksetta. Sekvenssikaaviot osissa. Jartiedoston uudelleen generointi, ja checkstyle päivitys.|
-| yht   | 27   | | 
+| 27.4. | 0,5 | Käärmeen ohjauksen parantelua, ei voi kääntyä 180 astetta ja törmätä itseensä.
+| 28.4  | 6   | Game over screeni pelin päättyessä, javadocia, hieman lisää testejä, yritin myös rakentaa ohjelman alkuun  aloitusvalikkoa. |   
+| yht   | 27,5   | | 
