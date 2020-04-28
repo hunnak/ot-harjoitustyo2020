@@ -40,6 +40,14 @@ public class Snake {
     public List<Point> getBodyparts() {
         return snakePoints;
     }
+    /**
+    * Method checks snake's direction parameter
+    * then method change coordinates by one, into the direction it is given equal
+    * In the start of the game snake also grow its full-grown shape (MINSIZE). 
+    * @param   x  returns int x coordinate
+    * @param   x  returns int y coordinate
+    * @return return parameters in string format (x,y)
+    */   
     public void move() {
         Point mouth = snakePoints.get(0);
         int newX = mouth.getX();
@@ -70,14 +78,11 @@ public class Snake {
     
     }
     /**
-    * Method sets boolean parameter grow to be true
+    * Method checks snake objects all bodypart point objects does these touch given topoint object 
     * 
-    * @param  topint   boolean parameter
-    * @param   
+    * @param  topoint   Given point object parameter, which will be check through all snake points 
     *
-    * @see    laskukone.Laskenta#laskeTn(int)
-    *
-    * @return todennäköisyys kalibroituna
+    * @return true if given point object coordinates match up with any snake point object
     */    
     public boolean touchPoint(Point topoint) {
         for (Point p : this.snakePoints) {
@@ -87,9 +92,16 @@ public class Snake {
         }
         return false;
     }
-    
+    /**
+    * Method checks does the first point object of snake
+    * touch any of its other point object 
+    * Basically check does snakemouth touch any of its own points 
+    *
+    * @return true if snakemouth point object coordinates match up with any other snake point object
+    */     
     public boolean touchItself() {
         return touchPoint(this.snakePoints.get(0));
     
     }
+    
 }

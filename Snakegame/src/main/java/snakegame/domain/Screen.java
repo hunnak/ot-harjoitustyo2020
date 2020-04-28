@@ -40,33 +40,75 @@ public class Screen extends Timer implements ActionListener {
         addActionListener(this);
         setInitialDelay(2000);
     }
+    /**
+    * Method return screen object int width parameter 
+    * @return parameter int width named as w
+    */ 
     public int getW() {        
         return this.w;
     }
+    /**
+    * Method return screen object int height parameter 
+    * @return parameter int height named as h
+    */ 
     public int getH() {
         return this.h;
     }
+        /**
+    * Method return screen's boolean gamecontinue parameter 
+    * @return boolean value true or false based on given parameter, it is used to check the state of game.
+    */ 
     public boolean gameContinue() {
         return gameContinue;
     }
+        /**
+    * Method returns screen's snake object 
+    * @return snake object
+    */ 
     public Snake getSnake() {
         return snake;
     }
+    /**
+    * Method sets screen's snake object with given snake object
+    * @param setSnake given snake object
+    */ 
     public void setSnake(Snake setSnake) {
         this.snake = setSnake;
     }
+    /**
+    * Method return screen's Token object  
+    * @return Token object
+    */ 
     public Token getToken() {
         return this.tokenPlace;
     }
+    /**
+    * Method sets screen's Token object with given Token object
+    * @param setSnake given Token object
+    */    
     public void setTokenToItsPlace(Token token) {
         this.tokenPlace = token;
     }
+    /**
+    * 
+    * This method is called whenever the screen object state is changed.
+    * method to have all the object's observers notified of the change.
+    * This method gives chance to change set update inteface state.
+    */
     public void setUpdate(Update update) {
         this.update = update;
     }
+    /**
+    * Method return screen's score parameter 
+    * @return scores integer
+    */ 
     public int getScores() {
         return scores;
     }
+    /**
+    * Method sets screen's Token object with given Token object
+    * @param setSnake given Token object
+    */ 
     private void move() {
         this.snake.move();
     }
@@ -106,12 +148,28 @@ public class Screen extends Timer implements ActionListener {
             
         }        
     }
+    /**
+    * 
+    * This method is called whenever the screen object state is changed.
+    * method to have all the object's observers notified of the change.
+    */
     private void updateInterface() {
         this.update.update();
     }
     
     
-
+    /**
+    * Method uses actionListener
+    *first method checks boolesan parameter state if method would continue. 
+    * If parameter gameContinue is false action method stops timer thread and calls gameOver method.
+    * If game state continue method cals move method for move snake object, 
+    * then check does any part of snake touch token, if it does snake grow, otherwise dont.
+    * then calls gotHurt method which checks have snake head collide any of its own parts and puts gameContinue boolean false if it does.
+    * Then calls outOfScreen to check have snakemouth collide walls as same procedure than previous method.
+    * Then calls updateInterface method to notify all screen object changes
+    * then sets to timer delay with 500 unit.
+    * @param e given action object
+    */ 
     @Override
     public void actionPerformed(ActionEvent e) {
         if (!gameContinue) {
@@ -128,9 +186,17 @@ public class Screen extends Timer implements ActionListener {
         updateInterface();
         setDelay(500);
     }
-    public void setText(JTextArea text) {
-        this.text = text;
-    }
+    //public void setText(JTextArea text) {
+    //    this.text = text;
+    //}
+    
+    /**
+    * Method ends the game and actionperformed loop, tells in the new screen that game is over
+    * gives ok or cancel option
+    * ok start game over again
+    * cancel shuts the application.
+    *@             
+    */ 
     public void gameOver() {
         //this.text.setText("GAME OVER! \n \n You got some sweet " + " scores" + "ps. turn the application on again");
         int returnValue = JOptionPane.showConfirmDialog(text,
@@ -151,6 +217,9 @@ public class Screen extends Timer implements ActionListener {
 				break;
 		}
     }
+    /**
+     * Fresh start, sets all objects at the class as the game has started over again
+     */
     public void freshGame() {
         
             this.snake = new Snake(this.w / 2, this.h / 2, Direction.Left);

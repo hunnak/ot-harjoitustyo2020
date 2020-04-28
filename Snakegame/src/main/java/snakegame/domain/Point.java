@@ -21,6 +21,11 @@ public class Point {
     public int getY() {
         return y;
     }
+    /**
+    * Method checks as boolean method does given point object touch this point object
+    * @param dapoint given point object coordinates will be check is those the same as this point object
+    * @return returns true if points have same coordinates, touch each other
+    */      
     public boolean touch(Point dapoint) {
         int daX = dapoint.getX();
         int daY = dapoint.getY();
