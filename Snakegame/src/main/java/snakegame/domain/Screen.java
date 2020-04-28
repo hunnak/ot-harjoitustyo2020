@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
+import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 import javax.swing.Timer;
 
@@ -102,21 +103,40 @@ public class Screen extends Timer implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (!gameContinue) {
+            this.stop();
             
             gameOver();
+            return;
         }
         move();
+        
         touchToken();
         gotHurt();
         updateInterface();
-        setDelay(1000 / this.snake.getSnakeLenght());
+        setDelay(500);
     }
     public void setText(JTextArea text) {
         this.text = text;
     }
     public void gameOver() {
-        this.text.setText("GAME OVER! \n \n You got some sweet " + getScores() + " scores" + "ps. turn the application on again");
-        
+        //this.text.setText("GAME OVER! \n \n You got some sweet " + " scores" + "ps. turn the application on again");
+        int returnValue = JOptionPane.showConfirmDialog(text,
+				"You got some sweet" + this.scores + "scores! Do you want to start a new game?", "GAME OVER!", JOptionPane
+				.OK_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE);
+		
+		switch (returnValue) {
+			case JOptionPane.OK_OPTION:
+				// new gme set needs to code 
+				break;
+				
+			case JOptionPane.CANCEL_OPTION:
+				System.exit(0);
+				break;
+			default:
+				JOptionPane.showMessageDialog(text, 
+						"Something went wrong :( /n Please relunch app");
+				break;
+		}
     }
 
 }

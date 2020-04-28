@@ -1,0 +1,3 @@
+Game instructions
+
+move snake from arrow buttons

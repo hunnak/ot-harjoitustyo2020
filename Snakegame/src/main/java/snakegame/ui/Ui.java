@@ -47,12 +47,12 @@ public class Ui implements Runnable {
         JButton instruction = new JButton("Let me tell about da snake");
         JButton scoretable = new JButton("Score table");
         
-        container.add(textarea);
+        //container.add(textarea);
         
-        container.add(startGame, BorderLayout.SOUTH);
+        //container.add(startGame, BorderLayout.NORTH);
         
         
-        container.add(selection(instruction, scoretable), BorderLayout.CENTER);
+        //container.add(selection(instruction, scoretable), BorderLayout.CENTER);
         
         
     }

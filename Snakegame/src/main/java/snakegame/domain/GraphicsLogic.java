@@ -48,6 +48,7 @@ public class GraphicsLogic extends JPanel implements Update {
                 this.pointSize,
                 this.pointSize);
     }
+    
     @Override
     protected void paintComponent(Graphics graphics) {
         super.paintComponent(graphics);
