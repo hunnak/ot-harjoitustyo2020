@@ -196,22 +196,22 @@ public class Screen extends Timer implements ActionListener {
     public void gameOver() {
         //this.text.setText("GAME OVER! \n \n You got some sweet " + " scores" + "ps. turn the application on again");
         int returnValue = JOptionPane.showConfirmDialog(text,
-        "You got some sweet " + this.scores + " scores! Do you want to start a new game?", "GAME OVER!", JOptionPane
-        .OK_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE);
+            "You got some sweet " + this.scores + " scores! Do you want to start a new game?", "GAME OVER!", JOptionPane
+            .OK_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE);
 		
-	switch (returnValue) {
+        switch (returnValue) {
             case JOptionPane.OK_OPTION:
-		freshGame();
-		break;
+                freshGame();
+                break;
 				
             case JOptionPane.CANCEL_OPTION:
-		System.exit(0);
-		break;
+                System.exit(0);
+                break;
             default:
-		JOptionPane.showMessageDialog(text, 
+                JOptionPane.showMessageDialog(text, 
                 "Something went wrong :( /n Please relunch app");
-		break;
-	}
+                break;
+        }
     }
     /**
      * Fresh start, sets all objects at the class as the game has started over again
