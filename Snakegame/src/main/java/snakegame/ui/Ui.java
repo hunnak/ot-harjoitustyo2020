@@ -6,11 +6,16 @@
 package snakegame.ui;
 
 
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.Dimension;
+import java.awt.GridLayout;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
 import javax.swing.WindowConstants;
 import snakegame.domain.GraphicsLogic;
 import snakegame.domain.Keylistener;
@@ -36,6 +41,20 @@ public class Ui implements Runnable {
         container.add(graphicsLogic);
         Keylistener keylistener = new Keylistener(screen.getSnake());
         frame.addKeyListener(keylistener);
+        
+        JButton startGame = new JButton("Bring da snake!");
+        JTextArea textarea = new JTextArea();
+        JButton instruction = new JButton("Let me tell about da snake");
+        JButton scoretable = new JButton("Score table");
+        
+        container.add(textarea);
+        
+        container.add(startGame, BorderLayout.SOUTH);
+        
+        
+        container.add(selection(instruction, scoretable), BorderLayout.CENTER);
+        
+        
     }
     public Update getUpdate() {
         return graphicsLogic; 
@@ -53,5 +72,19 @@ public class Ui implements Runnable {
         frame.pack();
         frame.setVisible(true);
     }
+    
+    public JPanel selection(JButton instruction, JButton scoretable) {
+        JPanel panel = new JPanel(new GridLayout(3, 1));
+        
+        panel.add(instruction);
+        panel.add(scoretable);
+     
+        
+        return panel;
+    }
+        
+        
+        
+    
     
 }

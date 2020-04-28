@@ -28,6 +28,7 @@ public class Screen extends Timer implements ActionListener {
     private Update update;
     private int scores;
     private JTextArea text;
+    
     public Screen(int width, int height) {
         super(1000, null);
         this.w = width;
