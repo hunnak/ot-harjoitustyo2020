@@ -55,6 +55,7 @@ public class GraphicsLogic extends JPanel implements Update {
         drawSnake(graphics);
         drawToken(graphics);
         
+        
     }
     
     

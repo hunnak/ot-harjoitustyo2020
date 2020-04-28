@@ -94,6 +94,18 @@ public class Screen extends Timer implements ActionListener {
             }          
         }
     }
+    private void outOfScreen() {
+        List<Point> bodyparts = this.snake.getBodyparts();
+        Point snakeMouth = bodyparts.get(this.snake.getSnakeLenght()-1);
+        
+        if (snakeMouth.getX() < 0 || snakeMouth.getX() > this.w) {
+            this.gameContinue = false;
+
+        } else if (snakeMouth.getY() < 0 || snakeMouth.getY() > this.h) {
+            this.gameContinue = false;
+            
+        }        
+    }
     private void updateInterface() {
         this.update.update();
     }
@@ -112,6 +124,7 @@ public class Screen extends Timer implements ActionListener {
         
         touchToken();
         gotHurt();
+        outOfScreen();
         updateInterface();
         setDelay(500);
     }
@@ -121,12 +134,12 @@ public class Screen extends Timer implements ActionListener {
     public void gameOver() {
         //this.text.setText("GAME OVER! \n \n You got some sweet " + " scores" + "ps. turn the application on again");
         int returnValue = JOptionPane.showConfirmDialog(text,
-				"You got some sweet" + this.scores + "scores! Do you want to start a new game?", "GAME OVER!", JOptionPane
+				"You got some sweet " + this.scores + " scores! Do you want to start a new game?", "GAME OVER!", JOptionPane
 				.OK_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE);
 		
 		switch (returnValue) {
 			case JOptionPane.OK_OPTION:
-				// new gme set needs to code 
+				freshGame();
 				break;
 				
 			case JOptionPane.CANCEL_OPTION:
@@ -134,9 +147,23 @@ public class Screen extends Timer implements ActionListener {
 				break;
 			default:
 				JOptionPane.showMessageDialog(text, 
-						"Something went wrong :( /n Please relunch app");
+                                    "Something went wrong :( /n Please relunch app");
 				break;
 		}
     }
+    public void freshGame() {
+        
+            this.snake = new Snake(this.w / 2, this.h / 2, Direction.Left);
+            this.tokenPlace = addNewToken();
+            this.gameContinue = true;
+            this.scores = 0;
+            
+            
+            this.addActionListener(this);
+            
+            this.start();
+            setInitialDelay(2000);
+        
+    }    
 
 }

@@ -47,6 +47,8 @@ public class Ui implements Runnable {
         JButton instruction = new JButton("Let me tell about da snake");
         JButton scoretable = new JButton("Score table");
         
+        
+        // Valikko paneelijätetty vielä pois koska en saanut toimimaan.
         //container.add(textarea);
         
         //container.add(startGame, BorderLayout.NORTH);

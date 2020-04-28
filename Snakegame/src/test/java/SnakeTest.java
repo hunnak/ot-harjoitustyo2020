@@ -37,7 +37,7 @@ public class SnakeTest {
     
     @Before
     public void setUp() {
-        snake= new Snake(10, 10, Direction.Left);
+        snake = new Snake(10, 10, Direction.Left);
     }
     
     @After
@@ -84,6 +84,7 @@ public class SnakeTest {
     }
     @Test
     public void touchItselfTest() {
-        
+      //  Point snakePart = snake.getBodyparts().get(1);
+      //  assertTrue(snake.touchItself());
     } 
 }

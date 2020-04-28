@@ -18,7 +18,7 @@ public class Snake {
     private Direction direc;
     public boolean grow;
     private static final int MINSIZE = 5;
-
+    
     public Snake(int newX, int newY, Direction newDirection) {
         this.snakePoints = new ArrayList<Point>();
         this.snakePoints.add(new Point(newX, newY));
@@ -60,11 +60,25 @@ public class Snake {
             this.grow = false;
         }
     }    
-   
+    /**
+    * Method sets boolean parameter grow to be true
+    * 
+    * @param   grow   boolean parameter
+    */
     public void grow() {
         this.grow = true;
     
-    }    
+    }
+    /**
+    * Method sets boolean parameter grow to be true
+    * 
+    * @param  topint   boolean parameter
+    * @param   
+    *
+    * @see    laskukone.Laskenta#laskeTn(int)
+    *
+    * @return todennäköisyys kalibroituna
+    */    
     public boolean touchPoint(Point topoint) {
         for (Point p : this.snakePoints) {
             if (p != topoint && p.touch(topoint)) {

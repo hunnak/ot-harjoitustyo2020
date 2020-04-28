@@ -41,7 +41,11 @@ public class ButtonEvents implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent action) {
       //game start inside this method for start button
-        
+        //if (action.getSource() == start) {
+      //      this.frame.requestFocus();
+    //        this.screen.start();
+  
+       // }
         if (action.getSource() == this.intro) {
             this.textfield.setText("How to play: \n" + readFile("intro.txt"));
         }

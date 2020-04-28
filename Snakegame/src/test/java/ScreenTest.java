@@ -10,13 +10,17 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import snakegame.domain.Screen;
+import snakegame.domain.Snake;
+import snakegame.domain.Direction;
+import snakegame.domain.Update;
 
 /**
  *
  * @author joelhunn
  */
 public class ScreenTest {
-    
+    Screen screen;
     public ScreenTest() {
     }
     
@@ -30,15 +34,27 @@ public class ScreenTest {
     
     @Before
     public void setUp() {
+        this.screen = new Screen(600, 600);
     }
     
     @After
     public void tearDown() {
     }
-
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
+    @Test
+    public void snakeTest() {
+        Snake newSnake = new Snake(10, 10, Direction.Right);
+        this.screen.setSnake(newSnake);
+        assertEquals(screen.getSnake(), newSnake);
+        
+    }
+   /* @Test
+   * public void snakeMoveTest() {
+        Snake newSnake = new Snake(10, 10, Direction.Right);
+        this.screen.setSnake(newSnake);
+        this.screen.getSnake().move();
+        this.screen.getSnake().getBodyparts().get(0);
+    
+        
+    }    
+    */    
 }

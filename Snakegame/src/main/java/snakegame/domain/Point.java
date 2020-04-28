@@ -6,7 +6,7 @@
 package snakegame.domain;
 
 public class Point {
-
+    
     int x;
     int y;
     public Point(int xx, int yy) {
@@ -32,7 +32,13 @@ public class Point {
         
     }
     
-       
+    /**
+    * Method returns point creatures x and y parameter boolean parameter grow to be true
+    * 
+    * @param   x  returns int x coordinate
+    * @param   x  returns int y coordinate
+    * @return return parameters in string format (x,y)
+    */   
     public String toString() {
         return "(" + this.x + "," + this.y + ")";
     }
