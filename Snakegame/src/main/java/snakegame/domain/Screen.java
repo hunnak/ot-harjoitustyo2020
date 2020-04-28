@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package snakegame.domain;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -14,7 +13,6 @@ import javafx.scene.paint.Color;
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 import javax.swing.Timer;
-
 /**
  *
  * @author joelhunn
@@ -138,7 +136,7 @@ public class Screen extends Timer implements ActionListener {
     }
     private void outOfScreen() {
         List<Point> bodyparts = this.snake.getBodyparts();
-        Point snakeMouth = bodyparts.get(this.snake.getSnakeLenght()-1);
+        Point snakeMouth = bodyparts.get(this.snake.getSnakeLenght() - 1);
         
         if (snakeMouth.getX() < 0 || snakeMouth.getX() > this.w) {
             this.gameContinue = false;
@@ -156,8 +154,6 @@ public class Screen extends Timer implements ActionListener {
     private void updateInterface() {
         this.update.update();
     }
-    
-    
     /**
     * Method uses actionListener
     *first method checks boolesan parameter state if method would continue. 
@@ -200,38 +196,38 @@ public class Screen extends Timer implements ActionListener {
     public void gameOver() {
         //this.text.setText("GAME OVER! \n \n You got some sweet " + " scores" + "ps. turn the application on again");
         int returnValue = JOptionPane.showConfirmDialog(text,
-				"You got some sweet " + this.scores + " scores! Do you want to start a new game?", "GAME OVER!", JOptionPane
-				.OK_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE);
+        "You got some sweet " + this.scores + " scores! Do you want to start a new game?", "GAME OVER!", JOptionPane
+        .OK_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE);
 		
-		switch (returnValue) {
-			case JOptionPane.OK_OPTION:
-				freshGame();
-				break;
+	switch (returnValue) {
+            case JOptionPane.OK_OPTION:
+		freshGame();
+		break;
 				
-			case JOptionPane.CANCEL_OPTION:
-				System.exit(0);
-				break;
-			default:
-				JOptionPane.showMessageDialog(text, 
-                                    "Something went wrong :( /n Please relunch app");
-				break;
-		}
+            case JOptionPane.CANCEL_OPTION:
+		System.exit(0);
+		break;
+            default:
+		JOptionPane.showMessageDialog(text, 
+                "Something went wrong :( /n Please relunch app");
+		break;
+	}
     }
     /**
      * Fresh start, sets all objects at the class as the game has started over again
      */
     public void freshGame() {
         
-            this.snake = new Snake(this.w / 2, this.h / 2, Direction.Left);
-            this.tokenPlace = addNewToken();
-            this.gameContinue = true;
-            this.scores = 0;
+        this.snake = new Snake(this.w / 2, this.h / 2, Direction.Left);
+        this.tokenPlace = addNewToken();
+        this.gameContinue = true;
+        this.scores = 0;
             
             
-            this.addActionListener(this);
+        this.addActionListener(this);
             
-            this.start();
-            setInitialDelay(2000);
+        this.start();
+        setInitialDelay(2000);
         
     }    
 

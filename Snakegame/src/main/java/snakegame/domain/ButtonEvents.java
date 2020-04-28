@@ -16,6 +16,8 @@ import javax.swing.JTextArea;
 /**
  *
  * @author joelhunn
+ * 
+ * THIS CLASS IS NOT USED, maybe in the future.
  */
 
 public class ButtonEvents implements ActionListener {
@@ -55,7 +57,7 @@ public class ButtonEvents implements ActionListener {
         }
         
 
-        }
+    }
     
 
  // @param tiedoston nimi
@@ -72,7 +74,7 @@ public class ButtonEvents implements ActionListener {
         String textlines = "";
         
         while (scanner.hasNextLine()) {
-            textlines+= scanner.nextLine() + " \n";
+            textlines += scanner.nextLine() + " \n";
         }
         
         scanner.close();
