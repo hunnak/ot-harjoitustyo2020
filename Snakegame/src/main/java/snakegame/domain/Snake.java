@@ -92,9 +92,9 @@ public class Snake {
     *
     * @return true if snakemouth point object coordinates match up with any other snake point object
     */     
-    public boolean touchItself() {
-        return touchPoint(this.snakePoints.get(0));
+    //public boolean touchItself() {
+    //    return touchPoint(this.snakePoints.get(0));
     
-    }
+    //}
     
 }
