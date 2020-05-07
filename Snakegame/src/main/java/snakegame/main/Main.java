@@ -26,7 +26,7 @@ public class Main {
         SwingUtilities.invokeLater(userInterface);
         while (userInterface.getUpdate() == null) {
             try {
-                Thread.sleep(100);
+                Thread.sleep(50);
                 
             } catch (InterruptedException ex) {
                 System.out.println("Graphics not created.");

@@ -44,9 +44,6 @@ public class Snake {
     * Method checks snake's direction parameter
     * then method change coordinates by one, into the direction it is given equal
     * In the start of the game snake also grow its full-grown shape (MINSIZE). 
-    * @param   x  returns int x coordinate
-    * @param   x  returns int y coordinate
-    * @return return parameters in string format (x,y)
     */   
     public void move() {
         Point mouth = snakePoints.get(0);
@@ -70,8 +67,6 @@ public class Snake {
     }    
     /**
     * Method sets boolean parameter grow to be true
-    * 
-    * @param   grow   boolean parameter
     */
     public void grow() {
         this.grow = true;
@@ -79,9 +74,7 @@ public class Snake {
     }
     /**
     * Method checks snake objects all bodypart point objects does these touch given topoint object 
-    * 
     * @param  topoint   Given point object parameter, which will be check through all snake points 
-    *
     * @return true if given point object coordinates match up with any snake point object
     */    
     public boolean touchPoint(Point topoint) {

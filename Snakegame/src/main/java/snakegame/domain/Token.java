@@ -14,7 +14,7 @@ public class Token extends Point {
     * This method makes Token class collect all methods from Point class 
     * 
     * @param   x  coordinate
-    * @param   x  coordinate
+    * @param   y  coordinate
     */   
     public Token(int x, int y) {
         super(x, y);

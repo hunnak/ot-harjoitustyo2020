@@ -42,10 +42,10 @@ public class Ui implements Runnable {
         Keylistener keylistener = new Keylistener(screen.getSnake());
         frame.addKeyListener(keylistener);
         
-        JButton startGame = new JButton("Bring da snake!");
-        JTextArea textarea = new JTextArea();
-        JButton instruction = new JButton("Let me tell about da snake");
-        JButton scoretable = new JButton("Score table");
+        //JButton startGame = new JButton("Bring da snake!");
+        //JTextArea textarea = new JTextArea();
+        //JButton instruction = new JButton("Let me tell about da snake");
+        //JButton scoretable = new JButton("Score table");
         
         
         // Valikko paneelijätetty vielä pois koska en saanut toimimaan.
@@ -75,7 +75,7 @@ public class Ui implements Runnable {
         frame.setVisible(true);
     }
     
-    public JPanel selection(JButton instruction, JButton scoretable) {
+    /**public JPanel selection(JButton instruction, JButton scoretable) {
         JPanel panel = new JPanel(new GridLayout(3, 1));
         
         panel.add(instruction);
@@ -84,7 +84,7 @@ public class Ui implements Runnable {
         
         return panel;
     }
-        
+    */    
         
         
     
