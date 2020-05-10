@@ -22,8 +22,14 @@ Ladatun jar tiedoston ajaminen komennolla: java -jar Snakegame.jar
 
 Checkstyle raportin ajaminen komennolla: mvn jxr:jxr checkstyle:checkstyle
 
-Testien ajo komento: mvn test jacoco:report
+Testien ajo komento: mvn test
+Testikattavuuden ajokomento: mvn jacoco:report
 
 Ohjelman ajaminen komennolla: mvn compile exec:java -Dexec.mainClass=snakegame.main.Main 
+
+JavaDocin generointi komennolla: mvn javadoc:javadoc
+JavaDocia voi tarkastella avaamalla selaimella tiedosto target/site/apidocs/index.html
+
+
 
 
