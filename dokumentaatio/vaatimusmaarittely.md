@@ -6,23 +6,26 @@ Käyttäjä voi pelata käärmepeliä ajankuluksi.
 
 ## Käyttäjät
 
-Alkuvaiheessa sovellus ei tallenna ennätypisteitä. Myöhemmin sovellukseen saatetaan nimimerkin lisääminen ja ennätyspisteet.
+Sovellus ei tallenna ennätypisteitä. 
 
 ## Käyttöliittymäluonnos
 
-Sovellus koostuu käyttöliittymästä, sekä pelin toteuttavista toiminnallisista luokista.
+Sovellus koostuu graafisesta käyttöliittymästä, sekä pelin toteuttavista toiminnallisista luokista.
 
 ## Perusversion tarjoama toiminnallisuus
 
 ### Toiminnallisuus
 
-Käärmepelissä liikutaan ruudulle ilmestyneellä 2D-tasolla, poimitaan pistepikseleitä ja vältetään törmämästä seiniin tai itse käärmeeseen. (tehty)
+Käärmepelissä liikutaan ruudulle ilmestyneellä 2D-tasolla nuolinäppäimillä, käärmeellä on tarkoitus poimia pistepikseleitä (token-olioita) ja vältetään törmämästä seiniin tai itse käärmeeseen. (tehty)
 Käärme liikkuu nuolinäppäimillä. (tehty)
+Käärme kasvaa kun se osuu token olioon. (tehty)
+Kun käärme törmää ja plei päättyy, tulee peli ohi ilmoitusikkuna, joka myös ilmoittaa kerätyt pisteet. (tehty)
 ## Jatkokehitysideoita
 
 Perusversion jälkeen järjestelmää täydennetään ajan salliessa esim. seuraavilla toiminnallisuuksilla
 
-- käärme kasvaa syödessään pisteitä (alustavasti tehty)
-- äänitehosteet
 - nimimerkki ennätyspisteitä varten, joka tallennetaan ylös.
-- vaikeusasteen lisääminen
+- vaikeusasteen lisääminen (käärmeen nopeutta voidaan säädellä ja lisätä näytölle törmäysesteitä)
+- lisätään pelin lopuksi ennätypisteille voidaan tallentaa nimimerkki.
+- sovelluksen käynnistäessä voisi tarkistaa ennätyspisteet, lisätä vaikeutta ym.
+- äänitehosteet
