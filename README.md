@@ -12,9 +12,11 @@ Peli päättyy kun pelaaja osuu käärmeen omaan runkoon käärmeen päällä.
 
 [Tuntikirjanpito](https://github.com/hunnak/ot-harjoitustyo2020/blob/master/dokumentaatio/tuntikirjanpito.md)
 
+[Käyttöohje](https://github.com/hunnak/ot-harjoitustyo2020/blob/master/dokumentaatio/kayttoohje.md)
+
 [Arkkitehtuuri](https://github.com/hunnak/ot-harjoitustyo2020/blob/master/dokumentaatio/arkkitehtuuri.md)
 
-[Release linkki](https://github.com/hunnak/ot-harjoitustyo2020/releases/tag/viikko5)
+[Release linkki](https://github.com/hunnak/ot-harjoitustyo2020/releases/download/Loppupalautus/Snakegame-1.0-SNAPSHOT.jar)
 
 [Testausdokumentti](https://github.com/hunnak/ot-harjoitustyo2020/blob/master/dokumentaatio/testaus.md)
 
