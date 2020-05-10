@@ -21,3 +21,5 @@ Havainollistava sekvenssikaavio ohjelmiston toiminnallisuudesta ohjelmiston käy
 <img src = "https://github.com/hunnak/ot-harjoitustyo2020/blob/master/dokumentaatio/sekvenssi_viikko5pt3.png" width="1000">
 
 ## Käyttöliittymä
+Ui käyttöliittymä johon screen parametrit ja grafiikan parametrit asetetaan, liittää näppäimistönkuuntelija luokan käärme olioon. Asettaa grafiikka ruudun koon. Palauttaa grafiikka logiikan grafiikat ruudulle.
+GraphicsLogics piirtää käärmeen ja tokenin grafiikat annettujen parametrien mukaan ja piirtää ne uudestaan joka peli syklissä update-inteface luokan update metodia kutsuttaessa.
