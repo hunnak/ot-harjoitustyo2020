@@ -134,7 +134,7 @@ public class Screen extends Timer implements ActionListener {
             }          
         }
     }
-    private void outOfScreen() {
+    public void outOfScreen() {
         Point head = snake.getBodyparts().get(0);
         
         if (head.getX() < 0 || head.getX() > this.w) {

@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 
+import com.sun.glass.events.KeyEvent;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -34,7 +35,7 @@ public class ScreenTest {
     
     @Before
     public void setUp() {
-        this.screen = new Screen(600, 600);
+        this.screen = new Screen(20, 20);
     }
     
     @After
@@ -68,13 +69,91 @@ public class ScreenTest {
        this.screen.move();
        this.screen.gotHurt();
        assertFalse(this.screen.gameContinue());
+    }
+    @Test
+    public void wallCollisionLeftTest() {
+       assertTrue(this.screen.gameContinue());
+       Snake newSnake = new Snake(10, 10, Direction.Left);
+       this.screen.setSnake(newSnake);
+       this.screen.move();
+       this.screen.move();
+       this.screen.move();
+       this.screen.move();
+       this.screen.move();
+       this.screen.move();
+       this.screen.move();
+       this.screen.move();
+       this.screen.move();
+       this.screen.move();
+       this.screen.move();
+       this.screen.outOfScreen();
+       assertFalse(this.screen.gameContinue());
+    }
+    @Test
+    public void wallCollisionDownTest() {
+       assertTrue(this.screen.gameContinue());
+       Snake newSnake = new Snake(10, 10, Direction.Down);
+       this.screen.setSnake(newSnake);
+       this.screen.move();
+       this.screen.move();
+       this.screen.move();
+       this.screen.move();
+       this.screen.move();
+       this.screen.move();
+       this.screen.move();
+       this.screen.move();
+       this.screen.move();
+       this.screen.move();
+       this.screen.move();
+       this.screen.outOfScreen();
+       assertFalse(this.screen.gameContinue());
+    }
+    @Test
+    public void wallCollisionUpTest() {
+       assertTrue(this.screen.gameContinue());
+       Snake newSnake = new Snake(10, 10, Direction.Up);
+       this.screen.setSnake(newSnake);
+       this.screen.move();
+       this.screen.move();
+       this.screen.move();
+       this.screen.move();
+       this.screen.move();
+       this.screen.move();
+       this.screen.move();
+       this.screen.move();
+       this.screen.move();
+       this.screen.move();
+       this.screen.move();
+       this.screen.outOfScreen();
+       assertFalse(this.screen.gameContinue());
+    }
+        @Test
+    public void wallCollisionRightTest() {
+       assertTrue(this.screen.gameContinue());
+       Snake newSnake = new Snake(10, 10, Direction.Right);
+       this.screen.setSnake(newSnake);
+       this.screen.move();
+       this.screen.move();
+       this.screen.move();
+       this.screen.move();
+       this.screen.move();
+       this.screen.move();
+       this.screen.move();
+       this.screen.move();
+       this.screen.move();
+       this.screen.move();
+       this.screen.move();
+       this.screen.outOfScreen();
+       assertFalse(this.screen.gameContinue());
     } 
     @Test
     public void getWidthTest() {
-        assertEquals(this.screen.getW(),400);
+        assertEquals(this.screen.getW(),20);
     }
     @Test
     public void getHeigthTest() {
-        assertEquals(this.screen.getH(),400);
-    }        
+        assertEquals(this.screen.getH(),20);
+    }
+
+    
 }
