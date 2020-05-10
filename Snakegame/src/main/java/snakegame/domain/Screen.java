@@ -107,16 +107,16 @@ public class Screen extends Timer implements ActionListener {
     * Method sets screen's Token object with given Token object
     * @param setSnake given Token object
     */ 
-    private void move() {
+    public void move() {
         this.snake.move();
     }
-    private Token addNewToken() {
+    public Token addNewToken() {
         int randomX = (int) (Math.random() * w);
         int randomY = (int) (Math.random() * h);
         
         return new Token(randomX, randomY);
     }
-    private void touchToken() {
+    public void touchToken() {
         if (!snake.touchPoint(tokenPlace)) {
             return;
         }
@@ -124,7 +124,7 @@ public class Screen extends Timer implements ActionListener {
         this.tokenPlace = addNewToken();
         snake.grow();
     }
-    private void gotHurt() {
+    public void gotHurt() {
         List<Point> points = snake.getBodyparts();
         Point head = snake.getBodyparts().get(0);
         for (int h = 1; h < snake.getBodyparts().size(); h++) {
@@ -135,13 +135,12 @@ public class Screen extends Timer implements ActionListener {
         }
     }
     private void outOfScreen() {
-        List<Point> bodyparts = this.snake.getBodyparts();
-        Point snakeMouth = bodyparts.get(this.snake.getSnakeLenght() - 1);
+        Point head = snake.getBodyparts().get(0);
         
-        if (snakeMouth.getX() < 0 || snakeMouth.getX() > this.w) {
+        if (head.getX() < 0 || head.getX() > this.w) {
             this.gameContinue = false;
 
-        } else if (snakeMouth.getY() < 0 || snakeMouth.getY() > this.h) {
+        } else if (head.getY() < 0 || head.getY() > this.h) {
             this.gameContinue = false;
             
         }        

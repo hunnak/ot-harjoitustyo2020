@@ -45,16 +45,36 @@ public class ScreenTest {
         Snake newSnake = new Snake(10, 10, Direction.Right);
         this.screen.setSnake(newSnake);
         assertEquals(screen.getSnake(), newSnake);
-        
     }
-   /* @Test
-   * public void snakeMoveTest() {
+   @Test
+   public void snakeMoveTest() {
         Snake newSnake = new Snake(10, 10, Direction.Right);
         this.screen.setSnake(newSnake);
-        this.screen.getSnake().move();
-        this.screen.getSnake().getBodyparts().get(0);
-    
-        
-    }    
-    */    
+        this.screen.move();
+        int x = this.screen.getSnake().getBodyparts().get(0).getX();
+        assertEquals(x,11);
+    } 
+    @Test
+    public void gotHurtTest() {
+       assertTrue(this.screen.gameContinue());
+       Snake newSnake = new Snake(10, 10, Direction.Left);
+       this.screen.setSnake(newSnake);
+       this.screen.move();
+       this.screen.getSnake().setDirection(Direction.Down);
+       this.screen.move();
+       this.screen.getSnake().setDirection(Direction.Right);
+       this.screen.move();
+       this.screen.getSnake().setDirection(Direction.Up);
+       this.screen.move();
+       this.screen.gotHurt();
+       assertFalse(this.screen.gameContinue());
+    } 
+    @Test
+    public void getWidthTest() {
+        assertEquals(this.screen.getW(),400);
+    }
+    @Test
+    public void getHeigthTest() {
+        assertEquals(this.screen.getH(),400);
+    }        
 }

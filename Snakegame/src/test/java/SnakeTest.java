@@ -86,7 +86,7 @@ public class SnakeTest {
         assertTrue(snake.touchPoint(pointTrue));
     }
     @Test
-    public void snakeMoveTest(){
+    public void snakeMoveTest() {
         snake.move();
         int x = snake.getBodyparts().get(0).getX();
         assertEquals(9, x);
@@ -102,5 +102,21 @@ public class SnakeTest {
         snake.move();
         int yy = snake.getBodyparts().get(0).getX();
         assertEquals(10, yy);     
+    }
+    @Test 
+    public void snakeBeginGrowTest() {
+        snake.move();
+        snake.move();
+        snake.move();
+        snake.move();
+        int lenght = snake.getSnakeLenght();
+        assertEquals(lenght, 5);
+    }
+    @Test
+    public void growTest() {
+        assertFalse(snake.grow);
+        snake.grow();
+        assertTrue(snake.grow);
+        
     }
 }

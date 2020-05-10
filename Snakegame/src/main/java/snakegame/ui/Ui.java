@@ -41,21 +41,7 @@ public class Ui implements Runnable {
         container.add(graphicsLogic);
         Keylistener keylistener = new Keylistener(screen.getSnake());
         frame.addKeyListener(keylistener);
-        
-        //JButton startGame = new JButton("Bring da snake!");
-        //JTextArea textarea = new JTextArea();
-        //JButton instruction = new JButton("Let me tell about da snake");
-        //JButton scoretable = new JButton("Score table");
-        
-        
-        // Valikko paneelijätetty vielä pois koska en saanut toimimaan.
-        //container.add(textarea);
-        
-        //container.add(startGame, BorderLayout.NORTH);
-        
-        
-        //container.add(selection(instruction, scoretable), BorderLayout.CENTER);
-        
+
         
     }
     public Update getUpdate() {
@@ -67,7 +53,7 @@ public class Ui implements Runnable {
     @Override
     public void run() {
         frame = new JFrame("Do you dare to play Snake Game");
-        frame.setPreferredSize(new Dimension(600, 600));
+        frame.setPreferredSize(new Dimension(450, 450));
         
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         createComponents(frame.getContentPane());
