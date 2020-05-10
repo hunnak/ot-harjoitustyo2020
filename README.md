@@ -28,6 +28,7 @@ Testikattavuuden ajokomento: mvn jacoco:report
 Ohjelman ajaminen komennolla: mvn compile exec:java -Dexec.mainClass=snakegame.main.Main 
 
 JavaDocin generointi komennolla: mvn javadoc:javadoc
+
 JavaDocia voi tarkastella avaamalla selaimella tiedosto target/site/apidocs/index.html
 
 
