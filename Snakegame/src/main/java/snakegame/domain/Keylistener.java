@@ -20,7 +20,7 @@ public class Keylistener extends KeyAdapter {
     }
     
     public void keyPressed(KeyEvent event) {
-        if (event.getKeyCode() == KeyEvent.VK_UP && this.snake.getDirection() != Direction.Down ) {
+        if (event.getKeyCode() == KeyEvent.VK_UP && this.snake.getDirection() != Direction.Down) {
             snake.setDirection(Direction.Up);
         } else if (event.getKeyCode() == KeyEvent.VK_RIGHT && this.snake.getDirection() != Direction.Left) {
             snake.setDirection(Direction.Right);

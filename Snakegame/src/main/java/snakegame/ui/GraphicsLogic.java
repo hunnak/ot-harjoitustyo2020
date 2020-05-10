@@ -27,11 +27,21 @@ public class GraphicsLogic extends JPanel implements Update {
     public void update() {
         repaint();
     }
+    /**
+     * Set's GraphicsLogic constructor by given screen and newPointsize objects
+     * @param newScreen Given screen object (game logic)
+     * @param newPointSize Set's element size for screen (Snake and tokens)
+     */
     public GraphicsLogic(Screen newScreen, int newPointSize) {
         this.screen = newScreen;
         this.pointSize = newPointSize;
         super.setBackground(Color.BLACK);
     }
+    /**
+     * This method draws snake object element parts by given graphics object 
+     * The graphicsLogics contains screen aand snake object
+     * @param graphics 
+     */    
     private void drawSnake(Graphics graphics) {
         graphics.setColor(Color.GREEN);
         Snake snake = screen.getSnake();
@@ -44,6 +54,10 @@ public class GraphicsLogic extends JPanel implements Update {
                     true);
         }
     }
+    /**
+     * This method draws token object to the screen
+     * @param graphics 
+     */    
     private void drawToken(Graphics graphics) {
         Token token = screen.getToken();
         graphics.setColor(Color.ORANGE);
@@ -53,7 +67,10 @@ public class GraphicsLogic extends JPanel implements Update {
                 this.pointSize,
                 this.pointSize);
     }
-    
+    /**
+     * This is the actual method that uses draw methods to draw the elements on the screen after update cycle.
+     * @param graphics 
+     */    
     @Override
     protected void paintComponent(Graphics graphics) {
         super.paintComponent(graphics);

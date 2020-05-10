@@ -37,6 +37,10 @@ public class Snake {
     public int getSnakeLenght() {
         return snakePoints.size();
     }
+    /**
+     * Method returns snake point elements as a list object
+     * @return snakepoints point list object
+     */    
     public List<Point> getBodyparts() {
         return snakePoints;
     }

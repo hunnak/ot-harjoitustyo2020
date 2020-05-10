@@ -104,18 +104,24 @@ public class Screen extends Timer implements ActionListener {
         return scores;
     }
     /**
-    * Method sets screen's Token object with given Token object
-    * @param setSnake given Token object
+    * Method call snake object's move method 
     */ 
     public void move() {
         this.snake.move();
     }
+    /**
+    * This method adds new Token object to inside screen object
+    *@return new Token object by new random coordinates 
+    */
     public Token addNewToken() {
         int randomX = (int) (Math.random() * w);
         int randomY = (int) (Math.random() * h);
         
         return new Token(randomX, randomY);
     }
+    /**
+    * This method check has snake touch Token, adds scores and set's snake to grow for one point object more
+    */ 
     public void touchToken() {
         if (!snake.touchPoint(tokenPlace)) {
             return;
@@ -124,6 +130,9 @@ public class Screen extends Timer implements ActionListener {
         this.tokenPlace = addNewToken();
         snake.grow();
     }
+    /**
+    * This method check that snake wont collide itself, set's gameContinue false if it does
+    */     
     public void gotHurt() {
         List<Point> points = snake.getBodyparts();
         Point head = snake.getBodyparts().get(0);
@@ -134,6 +143,9 @@ public class Screen extends Timer implements ActionListener {
             }          
         }
     }
+    /**
+    * This method check that snake wont go out of screen, set's gameContinue false if it does 
+    */ 
     public void outOfScreen() {
         Point head = snake.getBodyparts().get(0);
         
