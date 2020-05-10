@@ -85,16 +85,6 @@ public class Snake {
         }
         return false;
     }
-    /**
-    * Method checks does the first point object of snake
-    * touch any of its other point object 
-    * Basically check does snakemouth touch any of its own points 
-    *
-    * @return true if snakemouth point object coordinates match up with any other snake point object
-    */     
-    //public boolean touchItself() {
-    //    return touchPoint(this.snakePoints.get(0));
-    
-    //}
+
     
 }

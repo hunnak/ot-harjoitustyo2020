@@ -71,9 +71,12 @@ public class SnakeTest {
     }
     @Test
     public void snakeGrowTest() {
+        if(snake.grow){
+           snake.grow();
+           assertTrue(snake.grow); 
+        }
         assertFalse(snake.grow);
-        snake.grow();
-        assertTrue(snake.grow);
+
     }
     @Test
     public void snakeTouchTest() {
@@ -83,8 +86,21 @@ public class SnakeTest {
         assertTrue(snake.touchPoint(pointTrue));
     }
     @Test
-    public void touchItselfTest() {
-      //  Point snakePart = snake.getBodyparts().get(1);
-      //  assertTrue(snake.touchItself());
-    } 
+    public void snakeMoveTest(){
+        snake.move();
+        int x = snake.getBodyparts().get(0).getX();
+        assertEquals(9, x);
+        snake.setDirection(Direction.Down);
+        snake.move();
+        int y = snake.getBodyparts().get(0).getY();
+        assertEquals(11, y);
+        snake.setDirection(Direction.Right);
+        snake.move();
+        int xx = snake.getBodyparts().get(0).getX();
+        assertEquals(10, xx);        
+        snake.setDirection(Direction.Up);
+        snake.move();
+        int yy = snake.getBodyparts().get(0).getX();
+        assertEquals(10, yy);     
+    }
 }
