@@ -154,6 +154,10 @@ public class ScreenTest {
     public void getHeigthTest() {
         assertEquals(this.screen.getH(),20);
     }
+    @Test
+    public void getScoresTest() {
+        assertEquals(this.screen.getScores(), 0);
+    }
 
     
 }

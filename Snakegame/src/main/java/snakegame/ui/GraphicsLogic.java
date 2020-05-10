@@ -3,12 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package snakegame.domain;
+package snakegame.ui;
 
 import java.awt.Color;
 import java.awt.Graphics;
 import javax.swing.JPanel;
+import snakegame.domain.Point;
 import snakegame.domain.Screen;
+import snakegame.domain.Screen;
+import snakegame.domain.Snake;
+import snakegame.domain.Token;
+import snakegame.domain.Update;
 
 /**
  *

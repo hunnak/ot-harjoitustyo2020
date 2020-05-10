@@ -17,7 +17,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.WindowConstants;
-import snakegame.domain.GraphicsLogic;
 import snakegame.domain.Keylistener;
 import snakegame.domain.Screen;
 import snakegame.domain.Update;
