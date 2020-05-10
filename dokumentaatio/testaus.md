@@ -12,7 +12,7 @@ Automatisoitujen testien ytimen moudostavat sovelluslogiikkaa, eli pakkauksen [s
 
 Käyttöliittymäpakkausta ja pääohjelmaluokkaa lukuunottamatta sovelluksen testauksen rivikattavuus on 63% ja haarautumakattavuus 52%
 
-<img src="img" width="800">
+<img src="https://github.com/hunnak/ot-harjoitustyo2020/blob/master/dokumentaatio/testikattavuus.png" width="800">
 
 Testaamatta jäivät tilanteet, joissa käytettiin satunnaisgenerointia, peli ohi metodi.
 
