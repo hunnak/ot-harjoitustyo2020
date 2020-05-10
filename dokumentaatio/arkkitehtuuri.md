@@ -8,7 +8,7 @@ käyttöliittymä rakentaa graaffisen ikkunan ja kutsuu graphicslogicia piirtäm
 Pelilogiikka sijaitsee snakegame.domain pakkauksessa, ui pakkauksessa on käyttöliittymäluokka Ui ja grafiikan piirtämisen toteuttava luokka GraphicsLogic ja main pakkaus sisältää pääohjelman.
 
 
-## Sovellus logiikka
+## Sovelluslogiikka
 Sovelluksen logiikan toiminallisuudesta vastaavat domain pakkauksen luokat. Point luokka sisältää pääasiassa token ja snake olion osien koordinaatit x ja y ja voi tarkistaa osuuko point olio toiseen point olioon (onko samat koordinatit). Snake luokka tallentaa käärme olion point oliot listaan, sekä käärmeen perustoiminnallisuudet, liikkumisen ja itseensä törmäämistarkistuksen. Keylistenerillä voidaan asettaa snake olion suunta npääimistön nuolien mukaan,keylistener luokka tarkastaa myös ettei käärme käänny heti 180 astetta ja törmää itseensä. 
 
 Screen luokka sisältää suurimman osan pelilogiikasta screen oliossa on näytön rajat, käärme ja token olion koordinatteineen näppäimistön kuuntelutapahtumametodin (actionPerformed). Screen-luokan actionPerformed sisältää myös yksittäisen pelisyklin mitan, jota pävitetään joka syklin päätteeksi. Syklissä logiikka tarkistaa onko peli päättynyt, onko käärme kerännyt uuden tokenin ja onko käärme törmännyt. Screenluokka sisältää myös pelin päättymis metodin johon se siirtyy jos gameContinue boolean muuuttuja on false, game over metodissa peli päättyy, kerätyt pisteet ilmoitetaan ja ikkuna voidaan sulkea cancel napista. Ok napin jälkeinen fresh game metodi ei toimi, koska keylistener luokka ei enää toimi kun swing timer on kerran pysäytetty.
